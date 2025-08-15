@@ -13,37 +13,13 @@ Full‑stack emotion feedback app with a Flask backend (Python) and a React fron
 - Backend: Flask, SQLite, scikit‑learn, pandas
 - Frontend: React (Create React App)
 
-
 ## Prerequisites
 - Python 3.11/3.12
 - Node.js 18+
 
-## Backend Setup (Flask)
-```bash
-# From project root
-cd backend
-
-# (Optional) create a venv
-# python -m venv .venv
-# .\.venv\Scripts\activate  # Windows PowerShell
-
-pip install flask flask-cors pandas scikit-learn
-python app.py
-```
-Backend runs at: http://127.0.0.1:5000
-
 Notes:
 - The first run reads `EmotionDetection.csv`, trains a simple model, and creates `database.db` with tables: `users`, `feedback`.
 - If you ever need a fresh DB: stop the server and delete `backend/database.db`. It will be recreated automatically on next start.
-
-## Frontend Setup (React)
-```bash
-# From project root
-cd frontend
-npm install
-npm start
-```
-Frontend runs at: http://localhost:3000
 
 ## Usage
 - Sign Up using a username, email, password
@@ -60,10 +36,6 @@ Frontend runs at: http://localhost:3000
 - GET `/feedback` — list all feedback (used by Admin Dashboard)
 - POST `/admin` — body: `{ username, password }` → returns all feedback if admin creds are valid
 
-## Environment/Config
-- Backend origin: `http://127.0.0.1:5000`
-- Frontend origin: `http://localhost:3000`
-- CORS is enabled in the backend for local dev
 
 
 
